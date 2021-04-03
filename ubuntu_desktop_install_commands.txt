@@ -1,1 +1,32 @@
+#Updating commands
+$ sudo apt-get update
+$ sudo apt-get upgrade
 
+#check for open ssh server installed
+$ sudo systemctl status ssh
+#if not installed
+$ sudo apt install openssh-server
+
+(optional)
+$ sudo systemctl enable ssh
+$ sudo systemctl start ssh
+$ sudo ufw allow ssh
+$ sudo ufw enable
+$ sudo ufw status
+	
+#install net-tools to access ifconfig
+$ sudo apt install net-tools
+
+#set encryption false
+$ gsettings set org.gnome.Vino require-encryption false
+
+$ /boot/firmware
+$ sudo nano config.txt
+
+dtoverlay=vc4-kms-v3d   #comment for full resolution
+
+
+hdmi_force_hotplug=1
+hdmi_drive=2
+framebuffer_width=1366
+framebuffer_height=768
